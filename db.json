@@ -1,0 +1,905 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "How many Infinity Stones are there?",
+        "a": "3",
+        "b": "5",
+        "c": "6",
+        "d": "10",
+        "correct": "c" 
+      },
+      {
+        "id": 2,
+        "question": "What is the only food that cannot go bad",
+        "a": "Dark chocolate",
+        "b": "Peanut butter",
+        "c": "Peanut butter",
+        "d": "Honey",
+        "correct": "d" 
+      },
+      {
+        "id": 3,
+        "question": "Which was René Magritte's first surrealist painting?",
+        "a": "Not to Be Reproduced",
+        "b": "Personal Values",
+        "c": "The Lovers",
+        "d": "The Lost Jockey",
+        "correct": "d" 
+      },
+      {
+        "id": 4,
+        "question": "What 90s boy band member bought Myspace in 2011?",
+        "a": "Nick Lachey",
+        "b": "Justin Timberlake",
+        "c": "Shawn Stockman",
+        "d": "AJ McLean",
+        "correct": "b" 
+      },
+      {
+        "id": 5,
+        "question": "What is the most visited tourist attraction in the world?",
+        "a": "Eiffel Tower",
+        "b": "Statue of Liberty",
+        "c": "Great Wall of China",
+        "d": "Colosseum",
+        "correct": "a" 
+      },
+      {
+        "id": 6,
+        "question": "What's the name of Hagrid's pet spider?",
+        "a": "Nigini",
+        "b": "Crookshanks",
+        "c": "Aragog",
+        "d": "Mosag",
+        "correct": "c" 
+      },
+      {
+        "id": 7,
+        "question": "What's the heaviest organ in the human body?",
+        "a": "Brain",
+        "b": "Liver",
+        "c": "Skin",
+        "d": "Heart",
+        "correct": "b" 
+      },
+      {
+        "id": 8,
+        "question": "Who made the third most 3-pointers in the Playoffs in NBA history?",
+        "a": "Kevin Durant",
+        "b": "JJ Reddick",
+        "c": "Lebron James",
+        "d": "Kyle Korver",
+        "correct": "c" 
+      },
+      {
+        "id": 9,
+        "question": "Which of these EU countries does not use the euro as its currency?",
+        "a": "Poland",
+        "b": "Denmark",
+        "c": "Sweden",
+        "d": "All of the above",
+        "correct": "d" 
+      },
+      {
+        "id": 10,
+        "question": "Which US city is the sunniest major city and sees more than 320 sunny days each year?",
+        "a": "Phoenix",
+        "b": "Miami",
+        "c": "San Francisco",
+        "d": "Austin",
+        "correct": "a" 
+      },
+      {
+        "id": 11,
+        "question": "What type of food holds the world record for being the most stolen around the globe?",
+        "a": "Wagyu beef",
+        "b": "Cheese",
+        "c": "Coffee",
+        "d": "Chocolate",
+        "correct": "b" 
+      },
+      {
+        "id": 12,
+        "question": "What element does the chemical symbol Au stand for?",
+        "a": "Silver",
+        "b": "Magnesium",
+        "c": "Salt",
+        "d": "Gold",
+        "correct": "d" 
+      },
+      {
+        "id": 13,
+        "question": "What is the highest-grossing Broadway show of all time?",
+        "a": "The Lion King",
+        "b": "Wicked",
+        "c": "Kinky Boots",
+        "d": "Hamilton",
+        "correct": "a" 
+      },
+      {
+        "id": 14,
+        "question": "On average, how many seeds are located on the outside of a strawberry?",
+        "a": "100",
+        "b": "200",
+        "c": "400",
+        "d": "500",
+        "correct": "b" 
+      },
+      {
+        "id": 15,
+        "question": "Which fast food restaurant has the largest number of retail locations in the world?",
+        "a": "Jacky in The Box",
+        "b": "Chipotle",
+        "c": "Subway",
+        "d": "McDonald's",
+        "correct": "c" 
+      },
+      {
+        "id": 16,
+        "question": "Where is recognized as the location of the hottest temperature ever recorded on Earth?",
+        "a": "Mitribah, Kuwait",
+        "b": "Death Valley, California",
+        "c": "Yuma, Arizona",
+        "d": "Key West, Florida",
+        "correct": "b" 
+      },
+      {
+        "id": 17,
+        "question": "What is the oldest soft drink in the United States?",
+        "a": "Coca Cola",
+        "b": "Pepsi",
+        "c": "Dr. Pepper",
+        "d": "Canada Dry Ginger Ale",
+        "correct": "c" 
+      },
+      {
+        "id": 18,
+        "question": "What river passes through New Orleans, Louisiana?",
+        "a": "Orleans River",
+        "b": "Mississippi River",
+        "c": "Atchafalaya River",
+        "d": "Colorado River",
+        "correct": "b" 
+      },
+      {
+        "id": 19,
+        "question": "In what country do more than half of people believe in elves?",
+        "a": "Norway",
+        "b": "Russia",
+        "c": "Holland",
+        "d": "Iceland",
+        "correct": "d" 
+      },
+      {
+        "id": 20,
+        "question": "What is the name of the coffee shop in the sitcom Friends?",
+        "a": "Central Perk",
+        "b": "Java Park",
+        "c": "Central Park Coffee",
+        "d": "Central Park Roastery",
+        "correct": "a" 
+      },
+      {
+        "id": 21,
+        "question": "Which pop star burnt down her home gym with candles?",
+        "a": "Kim Kardashian",
+        "b": "Lady Gaga",
+        "c": "Zendaya",
+        "d": "Britney Spears",
+        "correct": "d" 
+      },
+      {
+        "id": 22,
+        "question": "What is the highest-grossing video game franchise to date?",
+        "a": "Mario",
+        "b": "Pokemon",
+        "c": "Call of Duty",
+        "d": "Street Fighter",
+        "correct": "b" 
+      },
+      {
+        "id": 23,
+        "question": "“Cirque du Soleil” started in what country?",
+        "a": "France",
+        "b": "USA",
+        "c": "Canada",
+        "d": "Russia",
+        "correct": "c" 
+      },
+      {
+        "id": 24,
+        "question": "Which country's national animal is a unicorn?",
+        "a": "Scotland",
+        "b": "Denmark",
+        "c": "New Zealand",
+        "d": "France",
+        "correct": "a" 
+      },
+      {
+        "id": 25,
+        "question": "What are the two highest-grossing films of all time?",
+        "a": "Avengers: End Game and Star Wars: Episode VII - The Force Awakens",
+        "b": "Avatar and Avengers: End Game",
+        "c": "Avengers: Infinity War and Titanic",
+        "d": "Furious 7 and Avatar",
+        "correct": "b" 
+      },
+      {
+        "id": 26,
+        "question": "Which Avenger other than Captain America was able to pick up Thor's Mjolnir in the Marvel movies?",
+        "a": "Wanda",
+        "b": "Spiderman",
+        "c": "Doctor Strange",
+        "d": "Vision",
+        "correct": "d" 
+      },
+      {
+        "id": 27,
+        "question": "What is the main ingredient in a falafel?",
+        "a": "Lentil",
+        "b": "Chickpea",
+        "c": "Broccoli",
+        "d": "Split pea",
+        "correct": "b" 
+      },
+      {
+        "id": 28,
+        "question": "What color dresses do Chinese women traditionally wear on their wedding day?",
+        "a": "Blue",
+        "b": "Gold",
+        "c": "Red",
+        "d": "White",
+        "correct": "c" 
+      },
+      {
+        "id": 29,
+        "question": "What is yellowtail fish called in Japanese?",
+        "a": "Ahi",
+        "b": "Ikura",
+        "c": "Hamachi",
+        "d": "Maguro",
+        "correct": "c" 
+      },
+      {
+        "id": 30,
+        "question": "What sport has been played on the moon?",
+        "a": "Frisbee",
+        "b": "Soccer",
+        "c": "Golf",
+        "d": "Bocce ball",
+        "correct": "c" 
+      },
+      {
+        "id": 31,
+        "question": "What is the highest-grossing holiday movie of all time?",
+        "a": "Elf",
+        "b": "Die Hard",
+        "c": "It's A Wonderful Life",
+        "d": "Home Alone",
+        "correct": "d" 
+      },
+      {
+        "id": 32,
+        "question": "What was the first cash crop in America?",
+        "a": "Tobacco",
+        "b": "Corn",
+        "c": "Sugar Cane",
+        "d": "Grapes",
+        "correct": "a" 
+      },
+      {
+        "id": 33,
+        "question": "Mycology is the scientific study of what?",
+        "a": "Cancer cells",
+        "b": "Flowers",
+        "c": "Fungi",
+        "d": "Blood",
+        "correct": "c" 
+      },
+      {
+        "id": 34,
+        "question": "What animal is the closest living relative of a human?",
+        "a": "Gorillas",
+        "b": "Monkeys",
+        "c": "Bonobos",
+        "d": "Homo sapiens",
+        "correct": "c" 
+      },
+      {
+        "id": 35,
+        "question": "What does the meaning of the word “zodiac” in Ancient Greek?",
+        "a": "Circle of personalities",
+        "b": "Circle of stars",
+        "c": "Circle of animals",
+        "d": "Circle of futures",
+        "correct": "c" 
+      },
+      {
+        "id": 36,
+        "question": "Aries, Sagittarius, and Leo are three zodiac signs in which triplicity?",
+        "a": "Air",
+        "b": "Water",
+        "c": "Fire",
+        "d": "Earth",
+        "correct": "c" 
+      },
+      {
+        "id": 37,
+        "question": "The first vaccine was for which disease?",
+        "a": "Chickenpox",
+        "b": "Polio",
+        "c": "Measles",
+        "d": "Smallpox",
+        "correct": "d" 
+      },
+      {
+        "id": 38,
+        "question": "Which Beatle made Elton John the godfather of his son?",
+        "a": "Paul McCartney",
+        "b": "John Lennon",
+        "c": "Ringo Starr",
+        "d": "George Harrison",
+        "correct": "b" 
+      },
+      {
+        "id": 39,
+        "question": "What lobster organ is made into a delicacy known as “tomalley”?",
+        "a": "Claw",
+        "b": "Liver",
+        "c": "Tail",
+        "d": "Antennae",
+        "correct": "b" 
+      },
+      {
+        "id": 40,
+        "question": "The villains in the 2007 version of the movie “Transformers” are known as what?",
+        "a": "Storm Troopers",
+        "b": "Sentinels",
+        "c": "Death Eaters",
+        "d": "Decepticons",
+        "correct": "d" 
+      },
+      {
+        "id": 41,
+        "question": "Which cereal grain is the most commonly used in beer?",
+        "a": "Wheat",
+        "b": "Barley",
+        "c": "Hops",
+        "d": "Rice",
+        "correct": "b" 
+      },
+      {
+        "id": 42,
+        "question": "“Indiana Jones and the Kingdom of the Crystal Skull” is based on whose story idea?",
+        "a": "Michael Bay",
+        "b": "Ernest Hemingway",
+        "c": "Tim Burton",
+        "d": "George Lucas",
+        "correct": "d" 
+      },
+      {
+        "id": 43,
+        "question": "What country are the Galapagos Islands located in?",
+        "a": "Belize",
+        "b": "Brazil",
+        "c": "Ecuador",
+        "d": "Colombia",
+        "correct": "c" 
+      },
+      {
+        "id": 44,
+        "question": "Which sea creature has three hearts?",
+        "a": "Shark",
+        "b": "Jellyfish",
+        "c": "Stingray",
+        "d": "Octopus",
+        "correct": "d" 
+      },
+      {
+        "id": 45,
+        "question": "Pupusas are from what country?",
+        "a": "Mexico",
+        "b": "El Salvador",
+        "c": "Brazil",
+        "d": "Poland",
+        "correct": "b" 
+      },
+      {
+        "id": 46,
+        "question": "What is the name of the talkative parrot in “Aladdin”?",
+        "a": "Pascal",
+        "b": "Meeko",
+        "c": "Iago",
+        "d": "Abu",
+        "correct": "c" 
+      },
+      {
+        "id": 47,
+        "question": "On “Friends”, what is Ross' occupation?",
+        "a": "Paleontologist",
+        "b": "Meteorologist",
+        "c": "News Anchor",
+        "d": "Teacher",
+        "correct": "a" 
+      },
+      {
+        "id": 48,
+        "question": "What is Rick's last name in “Rick and Morty”?",
+        "a": "Sanchez",
+        "b": "Smith",
+        "c": "Guetterman",
+        "d": "Noopers",
+        "correct": "a" 
+      },
+      {
+        "id": 49,
+        "question": "Where did the croissant originate?",
+        "a": "France",
+        "b": "Austria",
+        "c": "Turkey",
+        "d": "Tokyo",
+        "correct": "b" 
+      },
+      {
+        "id": 50,
+        "question": "In what U.S. state does “Breaking Bad” take place?",
+        "a": "Utah",
+        "b": "Missouri",
+        "c": "Texas",
+        "d": "New Mexico",
+        "correct": "d" 
+      },
+      {
+        "id": 51,
+        "question": "What country is Shakira from?",
+        "a": "Mexico",
+        "b": "Colombia",
+        "c": "Paraguay",
+        "d": "Puerto Rico",
+        "correct": "b" 
+      },
+      {
+        "id": 52,
+        "question": "Which of these retailers is the oldest operating?",
+        "a": "Macy's",
+        "b": "Brooks Brothers",
+        "c": "Kiehl's",
+        "d": "Saks Fifth Avenue",
+        "correct": "b" 
+      },
+      {
+        "id": 53,
+        "question": "Mount Olympus is the highest mountain in what country?",
+        "a": "Italy",
+        "b": "Spain",
+        "c": "Portugal",
+        "d": "Greece",
+        "correct": "d" 
+      },
+      {
+        "id": 54,
+        "question": "Which country ranks first in cereal consumption per capita?",
+        "a": "USA",
+        "b": "Italy",
+        "c": "Ireland",
+        "d": "Philippines",
+        "correct": "b" 
+      },
+      {
+        "id": 55,
+        "question": "From which country do French fries originate?",
+        "a": "Belgium",
+        "b": "France",
+        "c": "USA",
+        "d": "England",
+        "correct": "a" 
+      },
+      {
+        "id": 56,
+        "question": "What sport is referred to as the “sport of kings”?",
+        "a": "Bocce Ball",
+        "b": "Cricket",
+        "c": "Rugby",
+        "d": "Polo",
+        "correct": "d" 
+      },
+      {
+        "id": 57,
+        "question": "Who was the first Disney Princess?",
+        "a": "Cinderella",
+        "b": "Snow White",
+        "c": "Aurora",
+        "d": "Jasmine",
+        "correct": "b" 
+      },
+      {
+        "id": 58,
+        "question": "What year was In-N-Out Burger founded?",
+        "a": "1968",
+        "b": "1975",
+        "c": "1948",
+        "d": "1985",
+        "correct": "c" 
+      },
+      {
+        "id": 59,
+        "question": "How many islands are in Hawaii?",
+        "a": "4",
+        "b": "7",
+        "c": "48",
+        "d": "137",
+        "correct": "d" 
+      },
+      {
+        "id": 60,
+        "question": "What is the national alcoholic beverage of America?",
+        "a": "Rye",
+        "b": "Bourbon",
+        "c": "Whiskey",
+        "d": "Cognac",
+        "correct": "b" 
+      },
+      {
+        "id": 61,
+        "question": "What is Bruno Mars' real name?",
+        "a": "Peter Gene Hernandez",
+        "b": "Michael Nguyen-Stevenson",
+        "c": "Ray Aguirre",
+        "d": "Bruno Maritza",
+        "correct": "a" 
+      },
+      {
+        "id": 62,
+        "question": "What was the very first Pixar movie?",
+        "a": "Wall-E",
+        "b": "Monsters, Inc.",
+        "c": "A Bug's Life",
+        "d": "Toy Story",
+        "correct": "d" 
+      },
+      {
+        "id": 63,
+        "question": "What was the ancient Goddess of Love?",
+        "a": "Athena",
+        "b": "Venus",
+        "c": "Helen",
+        "d": "Hera",
+        "correct": "b" 
+      },
+      {
+        "id": 64,
+        "question": "What are imitation crab sticks made of?",
+        "a": "Whitefish",
+        "b": "Cuttlefish",
+        "c": "Tofu",
+        "d": "Calamari",
+        "correct": "a" 
+      },
+      {
+        "id": 65,
+        "question": "Which ocean is the Bermuda Triangle in?",
+        "a": "Pacific Ocean",
+        "b": "Atlantic Ocean",
+        "c": "Caribbean Ocean",
+        "d": "Indian Ocean",
+        "correct": "b" 
+      },
+      {
+        "id": 66,
+        "question": "Where is Kanye West from?",
+        "a": "Chicago, Illinois",
+        "b": "Boston, Massachusetts",
+        "c": "Detroit, Michigan",
+        "d": "Los Angeles, California",
+        "correct": "a" 
+      },
+      {
+        "id": 67,
+        "question": "What is the smallest country in the world?",
+        "a": "Luxembourg",
+        "b": "The Vatican City",
+        "c": "Palau",
+        "d": "San Marino",
+        "correct": "b" 
+      },
+      {
+        "id": 68,
+        "question": "What animal species is the only male that gets pregnant?",
+        "a": "Dolphin",
+        "b": "Elephant Seal",
+        "c": "Sea Turtle",
+        "d": "Seahorse",
+        "correct": "d" 
+      },
+      {
+        "id": 69,
+        "question": "Who was the first woman to ever be inducted into the Rock and Roll Hall of Fame?",
+        "a": "Dolly Parton",
+        "b": "Janis Joplin",
+        "c": "Joni Mitchell",
+        "d": "Aretha Franklin",
+        "correct": "d" 
+      },
+      {
+        "id": 70,
+        "question": "What is the hardest natural substance in the world?",
+        "a": "Granite",
+        "b": "Marble",
+        "c": "Diamond",
+        "d": "Iron",
+        "correct": "c" 
+      },
+      {
+        "id": 71,
+        "question": "Which “Wonders Of The World” is still in existence?",
+        "a": "Temple of Artemis",
+        "b": "Pyramids of Giza",
+        "c": "Hanging Gardens of Babylon",
+        "d": "Statue of Zeus",
+        "correct": "b" 
+      },
+      {
+        "id": 72,
+        "question": "Who painted the Mona Lisa?",
+        "a": "Michelangelo",
+        "b": "Vincent van Gogh",
+        "c": "Rembrandt",
+        "d": "Leonardo da Vinci",
+        "correct": "d" 
+      },
+      {
+        "id": 73,
+        "question": "Which company was the first to reach 1 trillion dollars?",
+        "a": "Microsoft",
+        "b": "Apple",
+        "c": "Amazon",
+        "d": "Google",
+        "correct": "b" 
+      },      
+      {
+        "id": 74,
+        "question": "Which animal has the largest eyes?",
+        "a": "Giant squid",
+        "b": "Blue whale",
+        "c": "Ostrich",
+        "d": "Elephant",
+        "correct": "a" 
+      },
+      {
+        "id": 75,
+        "question": "From what country did jazz originate?",
+        "a": "France",
+        "b": "USA",
+        "c": "Canada",
+        "d": "Germany",
+        "correct": "b" 
+      },      
+      {
+        "id": 76,
+        "question": "What aerobic Latin dance workout craze launched its own clothing line in 2007?",
+        "a": "Zumba",
+        "b": "Jazzercise",
+        "c": "Masala Bhangra",
+        "d": "Feel The Heat",
+        "correct": "a" 
+      },
+      {
+        "id": 77,
+        "question": "Which store, known for its giant furniture warehouses, sold an estimated 150 million Swedish meatballs in 2013?",
+        "a": "Pottery Barn",
+        "b": "Living Spaces",
+        "c": "CB2",
+        "d": "IKEA",
+        "correct": "d" 
+      },      
+      {
+        "id": 78,
+        "question": "Can you name the national dog breed of France?",
+        "a": "Bichon Frise",
+        "b": "Poodle",
+        "c": "Shih Tzu",
+        "d": "French Bulldog",
+        "correct": "b" 
+      },
+      {
+        "id": 79,
+        "question": "What cup size, meaning “thirty” in Italian, was introduced by Starbucks in 2011 for 31-ounce cold beverages?",
+        "a": "Venti",
+        "b": "Venta",
+        "c": "Trenti",
+        "d": "Trenta",
+        "correct": "d" 
+      },      
+      {
+        "id": 80,
+        "question": "Which animal kills the most humans annually?",
+        "a": "Bees",
+        "b": "Mosquitoes",
+        "c": "Sharks",
+        "d": "Alligators",
+        "correct": "b" 
+      },
+      {
+        "id": 81,
+        "question": "Which losing team did billionaire Mark Cuban buy for 285 million in 2000, and eventually lead to an NBA championship in 2011?",
+        "a": "Dallas Mavericks",
+        "b": "Cleveland Cavaliers",
+        "c": "Boston Celtics",
+        "d": "Golden State Warriors",
+        "correct": "a" 
+      },      
+      {
+        "id": 82,
+        "question": "In 1998, Jeff Bezos made a deal with British film fan Col Needham to purchase what movie-related site for $55 million?",
+        "a": "Fandango",
+        "b": "Rotten Tomatoes",
+        "c": "IMDb",
+        "d": "Plex TV",
+        "correct": "c" 
+      },
+      {
+        "id": 83,
+        "question": "Arachibutyrophobia is the feat of what sticking to the roof of your mouth?",
+        "a": "Soft bread",
+        "b": "Gummies",
+        "c": "Peanut butter",
+        "d": "Medicine",
+        "correct": "c" 
+      },      
+      {
+        "id": 84,
+        "question": "What country is the world's largest coffee bean producer?",
+        "a": "Brazil",
+        "b": "Tanzania",
+        "c": "Mexico",
+        "d": "Hawaii",
+        "correct": "a" 
+      },
+      {
+        "id": 85,
+        "question": "What alcoholic spirit is found in all four of these cocktails: Gimlet, Negroni, Aviation, and Tom Collins?",
+        "a": "Gin",
+        "b": "Vodka",
+        "c": "Whiskey",
+        "d": "Cognac",
+        "correct": "a" 
+      },      
+      {
+        "id": 86,
+        "question": "Poutine, often referred to as Canada’s national dish, consists of french fries, gravy, and which other ingredient?",
+        "a": "Mustard",
+        "b": "Tortilla chips",
+        "c": "Parmesan shavings",
+        "d": "Cheese curds",
+        "correct": "d" 
+      },
+      {
+        "id": 87,
+        "question": "What was the main dish at medieval Christmas feasts?",
+        "a": "Turkey",
+        "b": "Peacock",
+        "c": "Cornish Hen",
+        "d": "Roasted Pig",
+        "correct": "b" 
+      },      
+      {
+        "id": 88,
+        "question": "“Eating good in the neighborhood” is the slogan of what restaurant chain?",
+        "a": "Texas Roadhouse",
+        "b": "Chili's",
+        "c": "TGIF",
+        "d": "Applebee's",
+        "correct": "d" 
+      },
+      {
+        "id": 89,
+        "question": "Agar-agar is a jelly obtained by boiling several kinds of what edible food stuff together?",
+        "a": "Seaweed",
+        "b": "Horse hooves",
+        "c": "Tapioca",
+        "d": "Collage",
+        "correct": "a" 
+      },      
+      {
+        "id": 90,
+        "question": "A delicacy in Scotland, haggis is served inside what animal part?",
+        "a": "Crab's shell",
+        "b": "Pig's trotter",
+        "c": "Sheep's stomach",
+        "d": "Cow's intestine",
+        "correct": "c" 
+      },
+      {
+        "id": 91,
+        "question": "Often used to add a flavorful boost to sushi, wasabi has a flavor very similar to what?",
+        "a": "Horseradish",
+        "b": "Worcestershire sauce",
+        "c": "Jalapeno",
+        "d": "Mayonnaise",
+        "correct": "a" 
+      },
+      {
+        "id": 92,
+        "question": "Steak tartare is served in what way?",
+        "a": "Grilled",
+        "b": "Raw",
+        "c": "On the bone",
+        "d": "Sliced",
+        "correct": "b" 
+      },
+      {
+        "id": 93,
+        "question": "From what country did Prawn Crackers (Krupuk) originate?",
+        "a": "Indonesia",
+        "b": "China",
+        "c": "The Philippines",
+        "d": "Japan",
+        "correct": "a" 
+      },
+      {
+        "id": 94,
+        "question": "In what country was The Lord of the Rings trilogy shot?",
+        "a": "New Zealand",
+        "b": "Croatia",
+        "c": "Iceland",
+        "d": "Ireland",
+        "correct": "a" 
+      },
+      {
+        "id": 95,
+        "question": "In Thor: Love and Thunder, what is the name of Thor's new axe called?",
+        "a": "Bowcaster",
+        "b": "Jarnbjorn",
+        "c": "Thunderstrike",
+        "d": "Stormbreaker",
+        "correct": "d" 
+      },
+      {
+        "id": 96,
+        "question": "Which Tropic Thunder character was based on the combination of Russel Crowe, Daniel Day-Lewis and Colin Farrell?",
+        "a": "Tugg Speedman",
+        "b": "Kirk Lazarus",
+        "c": "Les Grossman",
+        "d": "Alpa Chino",
+        "correct": "b" 
+      },
+      {
+        "id": 97,
+        "question": "In 2015, which European city hosted the first Lollapalooza concert outside of the USA?",
+        "a": "Barcelona",
+        "b": "Berlin",
+        "c": "Madrid",
+        "d": "Budapest",
+        "correct": "b" 
+      },
+      {
+        "id": 98,
+        "question": "Which of New York City's five boroughs is the most populous, with over 2.5 million people in 2014?",
+        "a": "Queens",
+        "b": "Brooklyn",
+        "c": "Manhattan",
+        "d": "Staten Island",
+        "correct": "b" 
+      },
+      {
+        "id": 99,
+        "question": "Can you name the capital of Mexico?",
+        "a": "Mexico City",
+        "b": "Oaxaca",
+        "c": "Chihuahua",
+        "d": "Havana",
+        "correct": "a" 
+      },
+      {
+        "id": 100,
+        "question": "Who is Taylor Swift's “We Are Never Getting Back Together” allegedly about?",
+        "a": "Harry Styles",
+        "b": "Taylor Lautner",
+        "c": "Jake Gyllenhaal",
+        "d": "John Mayer",
+        "correct": "c" 
+      }
+    ],
+    "topUsers": []
+  }
