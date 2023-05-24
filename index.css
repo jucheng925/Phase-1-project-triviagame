@@ -20,3 +20,9 @@ table, th, td {
     padding: 15px;
     text-align: left;
   }
+
+  #greetings {
+    margin: 20px;
+    padding: 10 px;
+    display: none;
+  }
