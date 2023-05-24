@@ -1,0 +1,22 @@
+#question {
+    text-align: center;
+    width: 75%;
+    border: 10px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+#top-scorers {
+    padding: 10px;
+    background-color: rgb(156, 211, 213);
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
