@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Trivia game in 60 Secs</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <h2>Trivia Game in 60 secs</h2>
+    <div>
+      <form id="playername">
+        <label for="player-name">Player's Name</label>
+        <input type="text" name="player-name" placeholder="Enter your name"/>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id ="timer"></div>
+      <p>60</p>
+    <div id ="question">
+      <h3>Example question</h3>
+      <ul class="choices" id="a">a</ul>
+      <ul class="choices" id ="b">b</ul>
+      <ul class="choices" id ="c">c</ul>
+      <ul class ="choices" id ="d">d</ul>
+    </div>
+    <div id ="scoring">
+      <p>4 correct out of <span id="totalquestions">6</span> quesitons</p>
+    </div>
+    <div id="top-scorers">
+      <h4>Top Scorers of All Time</h4>
+      <table> 
+        <tr>
+          <th>Player's Name</th>
+          <th> Number of correct answers</th>
+        </tr>
+        <tr>
+          <td>Full Name</td>
+          <td>10</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
