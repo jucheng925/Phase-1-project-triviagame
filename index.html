@@ -10,11 +10,11 @@
     <h2>Trivia Game in 60 secs</h2>
     <div>
       <form id="playername">
-        <label for="player-name">Player's Name</label>
-        <input type="text" name="player-name" placeholder="Enter your name"/>
-        <button type="submit">Submit</button>
+        <label for="player_name">Player's Name</label>
+        <input type="text" id="player_name" placeholder="Enter your name"/>
+        <input type="submit" value="Submit"/>
       </form>
-      <div id="greetings">Welcome name. Click START to begin <button id="start">START</button></div>
+      <div id="greetings">Welcome <span id="name">name</span>. Click START to begin <button id="start">START</button></div>
     <div id ="timer"></div>
       <p>60</p>
     <div id ="question">
