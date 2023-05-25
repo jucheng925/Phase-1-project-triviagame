@@ -35,6 +35,7 @@ function startClock() {
     const message = document.querySelector("#goodluck")
     message.querySelector("#name").textContent = playerName
     message.style.display = "block"
+    //include questions
 }
 
 function countDown() {
@@ -46,4 +47,33 @@ function countDown() {
         sec --
         document.querySelector("#countdown").textContent = sec
     }
+}
+
+function fetchQuestions() {
+    fetch("http://localhost:3000/questions")
+    .then(resp => resp.json())
+    .then(data => selectAQuestion(data))
+}
+
+function selectAQuestion(data){
+    let i = 3//random number from 0-99//
+    renderQuestion(data[i])
+}
+
+function renderQuestion(dataSelected) {
+    const divQuest = document.querySelector("#question")
+    const placeQuestion = divQuest.querySelector("h3")
+    placeQuestion.textContent = dataSelected.question
+
+    const placeA = divQuest.querySelector("#a")
+    placeA.textContent = `A. ${dataSelected.a}` 
+
+    const placeB = divQuest.querySelector("#b")
+    placeB.textContent = `B. ${dataSelected.b}`
+   
+    const placeC = divQuest.querySelector("#c")
+    placeC.textContent = `C. ${dataSelected.c}`
+   
+    const placeD = divQuest.querySelector("#d")
+    placeD.textContent = `D. ${dataSelected.d}`
 }
