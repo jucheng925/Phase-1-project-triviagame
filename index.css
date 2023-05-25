@@ -37,3 +37,12 @@ table, th, td {
     text-align: center;
     padding: 15px;
   }
+
+  #timer {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    width: 100px;
+    text-align: center;
+    font-size: 32px;
+  }
