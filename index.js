@@ -7,11 +7,12 @@
 
 //after 60 secs, will add user name and score on the scoring list on the bottom - using post so it will go back to the server
 
-
+let playerName
 document.addEventListener("DOMContentLoaded", ()=> {
     document.querySelector("form").addEventListener("submit", (e) => {
         e.preventDefault()
-        handleName(e.target.player_name.value)
+        playerName = e.target.player_name.value
+        handleName(playerName)
     })
 })
 
@@ -30,14 +31,16 @@ function handleStart(button) {
 let intervalId
 function startClock() {
     intervalId = setInterval(countDown, 1000)
+    document.querySelector("#greetings").style.display = "none"
+    const message = document.querySelector("#goodluck")
+    message.querySelector("#name").textContent = playerName
+    message.style.display = "block"
 }
 
 function countDown() {
     let sec = document.querySelector("#countdown").textContent
     if (sec === "0") {
         clearInterval(intervalId)
-        console.log(`last one: ${sec}`)
-        intervalidId = null
     }
     else {
         sec --

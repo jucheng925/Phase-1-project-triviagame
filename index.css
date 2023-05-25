@@ -27,6 +27,12 @@ table, th, td {
     display: none;
   }
 
+  #goodluck {
+    margin: 20px;
+    padding: 10 px;
+    display: none;
+  }
+
   .choices {
     padding: 15px;
     border: 5px solid rgb(71, 190, 102);
