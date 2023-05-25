@@ -49,14 +49,21 @@ function countDown() {
     }
 }
 
+let masterData
 function fetchQuestions() {
     fetch("http://localhost:3000/questions")
     .then(resp => resp.json())
-    .then(data => selectAQuestion(data))
+    .then(data => {
+        masterData = data
+        selectAQuestion(masterData)})
 }
 
+const usedQuest = []
 function selectAQuestion(data){
-    let i = 3//random number from 0-99//
+    let i = Math.floor(Math.random() * 100);//return random number from 0-99//
+    
+    usedQuest.push(i)
+    console.log(usedQuest)
     renderQuestion(data[i])
 }
 
