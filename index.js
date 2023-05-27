@@ -49,22 +49,35 @@ function countDown() {
     }
 }
 
-let masterData
-function fetchQuestions() {
-    fetch("http://localhost:3000/questions")
+//This code will allow fetch to occur once for all questions and then using the master data selected the question. Cons - will use a lot of memory space
+//let masterData
+//function fetchQuestions() {
+//    fetch("http://localhost:3000/questions")
+//    .then(resp => resp.json())
+//    .then(data => {
+//        masterData = data
+//       selectAQuestion(masterData)})
+//}
+
+function fetchOne() {
+    fetch(`http://localhost:3000/questions/${selectAQuestion()}`)
     .then(resp => resp.json())
-    .then(data => {
-        masterData = data
-        selectAQuestion(masterData)})
+    .then(data => renderQuestion(data))
 }
 
 const usedQuest = []
-function selectAQuestion(data){
-    let i = Math.floor(Math.random() * 100);//return random number from 0-99//
-    
-    usedQuest.push(i)
-    console.log(usedQuest)
-    renderQuestion(data[i])
+function selectAQuestion() {
+    let i = Math.floor(Math.random() * 100) + 1;//return random number from 1-100//
+    if (usedQuest.length === 100) {
+        return alert("Sorry, we had ran out of questions")
+    }
+    else if (usedQuest.includes(i)){
+        console.log("repeat")
+        return selectAQuestion()
+    }
+    else {usedQuest.push(i)
+        console.log(usedQuest)
+        return i}
 }
 
 function renderQuestion(dataSelected) {
