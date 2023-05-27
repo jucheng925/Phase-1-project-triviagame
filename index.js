@@ -1,7 +1,4 @@
-//addevent listener -domcontented loaded
 
-//timer - need a start button - will start timer and give you the first quesiton
-//question randomialzation - will random the id number - fetch it from server and then display on site
 //add event listener - once user click on an answer - whether its wrong or correct, next question will appear
     //at the same time, it will be marked as correct or wrong, will indicate in the scoring section
 
@@ -26,6 +23,7 @@ function handleName(name) {
 //come back after building timing, and how to display the first question
 function handleStart(button) {
     button.addEventListener("click", startClock)
+    button.addEventListener("click", fetchOne)
 }
 
 let intervalId
@@ -80,20 +78,50 @@ function selectAQuestion() {
         return i}
 }
 
+let answer
 function renderQuestion(dataSelected) {
     const divQuest = document.querySelector("#question")
     const placeQuestion = divQuest.querySelector("h3")
     placeQuestion.textContent = dataSelected.question
+    answer = dataSelected.correct
 
     const placeA = divQuest.querySelector("#a")
     placeA.textContent = `A. ${dataSelected.a}` 
+    placeA.addEventListener("click", e => {
+        handleClick(e.target.id)
+    })
 
     const placeB = divQuest.querySelector("#b")
     placeB.textContent = `B. ${dataSelected.b}`
-   
+    placeB.addEventListener("click", e => {
+        handleClick(e.target.id)
+    })
+
     const placeC = divQuest.querySelector("#c")
     placeC.textContent = `C. ${dataSelected.c}`
+    placeC.addEventListener("click", e => {
+        handleClick(e.target.id)
+    })
    
     const placeD = divQuest.querySelector("#d")
     placeD.textContent = `D. ${dataSelected.d}`
+    placeD.addEventListener("click", e => {
+        handleClick(e.target.id)
+    })
+}
+
+//// need to remove event listener after its been clicked
+//closure - need to bring the correct out of the function block
+function handleClick(selectedChoice) {
+    if (selectedChoice === answer) {
+        console.log("Correct")
+        answer = null
+        console.log(answer)
+        return true
+    }
+    else {console.log ("nope" + "I am correct:" + answer)
+        answer = null
+        console.log(answer)
+         return false}
+
 }
