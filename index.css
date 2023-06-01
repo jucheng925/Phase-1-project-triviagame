@@ -2,7 +2,7 @@
     text-align: center;
     width: 75%;
     border: 10px solid green;
-    padding: 50px;
+    padding: 40px;
     margin: 20px;
 }
 
@@ -41,7 +41,7 @@ table, th, td {
 
   #scoring {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
   }
 
   #timer {

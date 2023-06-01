@@ -4,6 +4,9 @@
 
 //after 60 secs, will add user name and score on the scoring list on the bottom - using post so it will go back to the server
 
+//need to turn on server using "json-server --watch db.json"
+
+
 let playerName
 document.addEventListener("DOMContentLoaded", ()=> {
     document.querySelector("form").addEventListener("submit", (e) => {
@@ -22,6 +25,7 @@ function handleName(name) {
 
 //come back after building timing, and how to display the first question
 function handleStart(button) {
+    document.querySelectorAll(".choices").forEach(e => e.addEventListener("click", e => handleClick(e.target.id)))
     button.addEventListener("click", startClock)
     button.addEventListener("click", fetchOne)
 }
@@ -33,13 +37,15 @@ function startClock() {
     const message = document.querySelector("#goodluck")
     message.querySelector("#name").textContent = playerName
     message.style.display = "block"
-    //include questions
 }
 
 function countDown() {
     let sec = document.querySelector("#countdown").textContent
     if (sec === "0") {
         clearInterval(intervalId)
+        handleEnd(document.querySelector("#scoring").querySelector("p").textContent)
+        document.querySelector("#question").textContent = " "
+        //document.querySelectorAll(".choices").forEach(e => e.removeEventListener("click", e => handleClick(e.target.id)))
     }
     else {
         sec --
@@ -70,58 +76,64 @@ function selectAQuestion() {
         return alert("Sorry, we had ran out of questions")
     }
     else if (usedQuest.includes(i)){
-        console.log("repeat")
         return selectAQuestion()
     }
     else {usedQuest.push(i)
-        console.log(usedQuest)
         return i}
 }
+
 
 let answer
 function renderQuestion(dataSelected) {
     const divQuest = document.querySelector("#question")
-    const placeQuestion = divQuest.querySelector("h3")
-    placeQuestion.textContent = dataSelected.question
-    answer = dataSelected.correct
+    divQuest.querySelector("h3").textContent = dataSelected.question
 
-    const placeA = divQuest.querySelector("#a")
-    placeA.textContent = `A. ${dataSelected.a}` 
-    placeA.addEventListener("click", e => {
-        handleClick(e.target.id)
-    })
+    divQuest.querySelector("#a").textContent = `A. ${dataSelected.a}` 
 
-    const placeB = divQuest.querySelector("#b")
-    placeB.textContent = `B. ${dataSelected.b}`
-    placeB.addEventListener("click", e => {
-        handleClick(e.target.id)
-    })
+    divQuest.querySelector("#b").textContent = `B. ${dataSelected.b}`
 
-    const placeC = divQuest.querySelector("#c")
-    placeC.textContent = `C. ${dataSelected.c}`
-    placeC.addEventListener("click", e => {
-        handleClick(e.target.id)
-    })
+    divQuest.querySelector("#c").textContent = `C. ${dataSelected.c}`
    
-    const placeD = divQuest.querySelector("#d")
-    placeD.textContent = `D. ${dataSelected.d}`
-    placeD.addEventListener("click", e => {
-        handleClick(e.target.id)
-    })
+    divQuest.querySelector("#d").textContent = `D. ${dataSelected.d}`
+
+    answer = dataSelected.correct
 }
 
-//// need to remove event listener after its been clicked
 //closure - need to bring the correct out of the function block
 function handleClick(selectedChoice) {
     if (selectedChoice === answer) {
         console.log("Correct")
-        answer = null
-        console.log(answer)
-        return true
+        handleCorrectAnswers(true)
     }
     else {console.log ("nope" + "I am correct:" + answer)
-        answer = null
-        console.log(answer)
-         return false}
+        handleCorrectAnswers(false)}
+    answer = null
+    fetchOne()
+}
 
+let questionArray = []
+function handleCorrectAnswers(response){
+    response ? questionArray.push("O") : questionArray.push("X")
+    const numCorrect = questionArray.filter(e => e === "O").length
+    document.querySelector("#numcorrect").textContent = numCorrect
+    document.querySelector("#totalquestions").textContent = questionArray.length
+}
+
+function handleEnd(scoringString) {
+    if(window.confirm(`Congrations ${playerName}!\nYou answered${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
+        console.log(scoringString)
+        let wordArray = scoringString.split(' ');
+        wordArray.pop();
+        wordArray.splice(1,3);
+        console.log(wordArray);
+        let newString = wordArray.toString();
+        newString = newString.replace(',',' / ')
+        
+        const newTr = document.createElement("tr")
+        newTr.innerHTML = `
+                <td>${playerName}</td>
+                <td>${newString}</td>`
+        document.querySelector("table").append(newTr)
+    }
+    else console.log("Thanks for playing")
 }
