@@ -9,10 +9,11 @@
 
 let playerName
 document.addEventListener("DOMContentLoaded", ()=> {
+    fetchScore();
     document.querySelector("form").addEventListener("submit", (e) => {
-        e.preventDefault()
-        playerName = e.target.player_name.value
-        handleName(playerName)
+        e.preventDefault();
+        playerName = e.target.player_name.value;
+        handleName(playerName);
     })
 })
 
@@ -119,6 +120,19 @@ function handleCorrectAnswers(response){
     document.querySelector("#totalquestions").textContent = questionArray.length
 }
 
+function fetchScore() {
+    fetch("http://localhost:3000/topUsers")
+    .then(resp => resp.json())
+    .then(data => data.map(user=>renderTopScore(user.fullName, user.correctAnswers)))
+}
+function renderTopScore(name, score) {
+    const newTr = document.createElement("tr")
+    newTr.innerHTML = `
+            <td>${name}</td>
+            <td>${score}</td>`
+    document.querySelector("table").append(newTr)
+} 
+
 function handleEnd(scoringString) {
     if(window.confirm(`Congrations ${playerName}!\nYou answered ${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
         console.log(scoringString)
@@ -128,11 +142,7 @@ function handleEnd(scoringString) {
         let newString = wordArray.toString();
         newString = newString.replace(',',' / ');
         
-        const newTr = document.createElement("tr")
-        newTr.innerHTML = `
-                <td>${playerName}</td>
-                <td>${newString}</td>`
-        document.querySelector("table").append(newTr)
+        renderTopScore(playerName, newString)
 
         fetch("http://localhost:3000/topUsers", {
             method: "POST",
