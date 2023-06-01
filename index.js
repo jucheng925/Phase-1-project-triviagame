@@ -120,20 +120,31 @@ function handleCorrectAnswers(response){
 }
 
 function handleEnd(scoringString) {
-    if(window.confirm(`Congrations ${playerName}!\nYou answered${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
+    if(window.confirm(`Congrations ${playerName}!\nYou answered ${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
         console.log(scoringString)
         let wordArray = scoringString.split(' ');
         wordArray.pop();
         wordArray.splice(1,3);
-        console.log(wordArray);
         let newString = wordArray.toString();
-        newString = newString.replace(',',' / ')
+        newString = newString.replace(',',' / ');
         
         const newTr = document.createElement("tr")
         newTr.innerHTML = `
                 <td>${playerName}</td>
                 <td>${newString}</td>`
         document.querySelector("table").append(newTr)
+
+        fetch("http://localhost:3000/topUsers", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            body: JSON.stringify({
+                fullName: `${playerName}`,
+                correctAnswers: `${newString}`,
+            }),
+        });
     }
     else console.log("Thanks for playing")
 }
