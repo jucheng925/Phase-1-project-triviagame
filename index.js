@@ -45,8 +45,6 @@ function countDown() {
     if (sec === "0") {
         clearInterval(intervalId)
         handleEnd(document.querySelector("#scoring").querySelector("p").textContent)
-        document.querySelector("#question").textContent = " "
-        //document.querySelectorAll(".choices").forEach(e => e.removeEventListener("click", e => handleClick(e.target.id)))
     }
     else {
         sec --
@@ -103,11 +101,9 @@ function renderQuestion(dataSelected) {
 //closure - need to bring the correct out of the function block
 function handleClick(selectedChoice) {
     if (selectedChoice === answer) {
-        console.log("Correct")
         handleCorrectAnswers(true)
     }
-    else {console.log ("nope" + "I am correct:" + answer)
-        handleCorrectAnswers(false)}
+    else {handleCorrectAnswers(false)}
     answer = null
     fetchOne()
 }
@@ -134,7 +130,7 @@ function renderTopScore(name, score) {
 } 
 
 function handleEnd(scoringString) {
-    if(window.confirm(`Congrations ${playerName}!\nYou answered ${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
+    if(confirm(`Congratulations ${playerName}!\nYou answered ${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
         console.log(scoringString)
         let wordArray = scoringString.split(' ');
         wordArray.pop();
@@ -155,6 +151,7 @@ function handleEnd(scoringString) {
                 correctAnswers: `${newString}`,
             }),
         });
+        return false
     }
-    else console.log("Thanks for playing")
+document.querySelector("#question").textContent = "Thanks for playing!"
 }
