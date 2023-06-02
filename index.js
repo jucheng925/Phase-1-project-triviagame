@@ -26,7 +26,6 @@ function handleName(name) {
 
 //come back after building timing, and how to display the first question
 function handleStart(button) {
-    document.querySelectorAll(".choices").forEach(e => e.addEventListener("click", e => handleClick(e.target.id)))
     button.addEventListener("click", startClock)
     button.addEventListener("click", fetchOne)
 }
@@ -38,6 +37,7 @@ function startClock() {
     const message = document.querySelector("#goodluck")
     message.querySelector("#name").textContent = playerName
     message.style.display = "block"
+    document.querySelectorAll(".choices").forEach(e => e.addEventListener("click", e => handleClick(e.target.id)))
 }
 
 function countDown() {
@@ -72,7 +72,8 @@ const usedQuest = []
 function selectAQuestion() {
     let i = Math.floor(Math.random() * 100) + 1;//return random number from 1-100//
     if (usedQuest.length === 100) {
-        return alert("Sorry, we had ran out of questions")
+        return alert("Sorry, we had ran out of questions!")
+        //restartGame()
     }
     else if (usedQuest.includes(i)){
         return selectAQuestion()
@@ -87,25 +88,30 @@ function renderQuestion(dataSelected) {
     const divQuest = document.querySelector("#question")
     divQuest.querySelector("h3").textContent = dataSelected.question
 
-    divQuest.querySelector("#a").textContent = `A. ${dataSelected.a}` 
+    divQuest.querySelector("#a").textContent = `A. ${dataSelected.a}`
+    divQuest.querySelector("#a").style.borderColor = "white"
 
     divQuest.querySelector("#b").textContent = `B. ${dataSelected.b}`
+    divQuest.querySelector("#b").style.borderColor = "white"
 
     divQuest.querySelector("#c").textContent = `C. ${dataSelected.c}`
+    divQuest.querySelector("#c").style.borderColor = "white"
    
     divQuest.querySelector("#d").textContent = `D. ${dataSelected.d}`
+    divQuest.querySelector("#d").style.borderColor = "white"
 
     answer = dataSelected.correct
 }
 
 //closure - need to bring the correct out of the function block
 function handleClick(selectedChoice) {
+    document.querySelector(`#${answer}`).style.borderColor = "red"
     if (selectedChoice === answer) {
         handleCorrectAnswers(true)
     }
     else {handleCorrectAnswers(false)}
     answer = null
-    fetchOne()
+    setTimeout(fetchOne, 500)
 }
 
 let questionArray = []
