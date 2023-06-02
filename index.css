@@ -52,3 +52,11 @@ table, th, td {
     text-align: center;
     font-size: 32px;
   }
+
+  #endbox {
+    text-align: center;
+    width: 75%;
+    border: 10px solid green;
+    padding: 40px;
+    margin: 20px;
+  }

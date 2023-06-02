@@ -135,8 +135,25 @@ function renderTopScore(name, score) {
     document.querySelector("table").append(newTr)
 } 
 
+function postTopScore(name, score) {
+    fetch("http://localhost:3000/topUsers", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify({
+            fullName: `${name}`,
+            correctAnswers: `${score}`,
+        }),
+    })
+}
+
 function handleEnd(scoringString) {
-    if(confirm(`Congratulations ${playerName}!\nYou answered ${scoringString}\nWould you like to be added to the Top Scoring Board?`)){
+    document.querySelector("#goodluck").style.display = "none"
+    document.querySelector("#question").style.display = "none"
+    document.querySelector("#endbox").style.display = "block"
+  /*     Congratulations ${playerName}! You answered ${scoringString} Would you like to be added to the Top Scoring Board?`
         console.log(scoringString)
         let wordArray = scoringString.split(' ');
         wordArray.pop();
@@ -145,19 +162,9 @@ function handleEnd(scoringString) {
         newString = newString.replace(',',' / ');
         
         renderTopScore(playerName, newString)
+        postTopScore(playerName, newString)
 
-        fetch("http://localhost:3000/topUsers", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            body: JSON.stringify({
-                fullName: `${playerName}`,
-                correctAnswers: `${newString}`,
-            }),
-        });
-        return false
+        return true
     }
-document.querySelector("#question").textContent = "Thanks for playing!"
+document.querySelector("#question").textContent = "Thanks for playing!" */
 }
