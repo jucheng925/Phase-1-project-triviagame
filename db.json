@@ -911,41 +911,6 @@
       "fullName": "Kimchi",
       "correctAnswers": "3 / 8",
       "id": 2
-    },
-    {
-      "fullName": "Kimchi",
-      "correctAnswers": "5 / 9",
-      "id": 3
-    },
-    {
-      "fullName": "test",
-      "correctAnswers": "1 / 8",
-      "id": 4
-    },
-    {
-      "fullName": "Kimchi",
-      "correctAnswers": "0 / 6",
-      "id": 5
-    },
-    {
-      "fullName": "Kimchi",
-      "correctAnswers": "0 / 5",
-      "id": 6
-    },
-    {
-      "fullName": "Kimchi",
-      "correctAnswers": "0 / 6",
-      "id": 7
-    },
-    {
-      "fullName": "Kimchi",
-      "correctAnswers": "1 / 5",
-      "id": 8
-    },
-    {
-      "fullName": "Kimchi",
-      "correctAnswers": "1 / 5",
-      "id": 9
     }
   ]
 }
