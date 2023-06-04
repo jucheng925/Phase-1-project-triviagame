@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
     })
 })
 
+
+////Handlers
 function handleName(name) {
     document.querySelector("#name").textContent = name
     document.querySelector("#greetings").style.display = "block"
@@ -73,7 +75,6 @@ function selectAQuestion() {
     let i = Math.floor(Math.random() * 100) + 1;//return random number from 1-100//
     if (usedQuest.length === 100) {
         return alert("Sorry, we had ran out of questions!")
-        //restartGame()
     }
     else if (usedQuest.includes(i)){
         return selectAQuestion()
@@ -87,19 +88,11 @@ let answer
 function renderQuestion(dataSelected) {
     const divQuest = document.querySelector("#question")
     divQuest.querySelector("h3").textContent = dataSelected.question
-
-    divQuest.querySelector("#a").textContent = `A. ${dataSelected.a}`
-    divQuest.querySelector("#a").style.borderColor = "white"
-
-    divQuest.querySelector("#b").textContent = `B. ${dataSelected.b}`
-    divQuest.querySelector("#b").style.borderColor = "white"
-
-    divQuest.querySelector("#c").textContent = `C. ${dataSelected.c}`
-    divQuest.querySelector("#c").style.borderColor = "white"
-   
-    divQuest.querySelector("#d").textContent = `D. ${dataSelected.d}`
-    divQuest.querySelector("#d").style.borderColor = "white"
-
+    const aBC = ["a","b","c","d"]
+    aBC.forEach(letter => {
+        document.querySelector(`#${letter}`).textContent = `${letter.toUpperCase()}. ${dataSelected[letter]}`
+        document.querySelector(`#${letter}`).style.borderColor = "white"
+    })
     answer = dataSelected.correct
 }
 
@@ -110,8 +103,9 @@ function handleClick(selectedChoice) {
         handleCorrectAnswers(true)
     }
     else {handleCorrectAnswers(false)}
-    answer = null
     setTimeout(fetchOne, 500)
+    setTimeout(()=> answer = null, 500) //reset answer
+    
 }
 
 let questionArray = []
@@ -147,14 +141,15 @@ function postTopScore(name, score) {
             correctAnswers: `${score}`,
         }),
     })
+    .then(resp => console.log(resp))
 }
 
 function handleEnd(scoringString) {
     document.querySelector("#goodluck").style.display = "none"
-    document.querySelector("#question").style.display = "none"
     document.querySelector("#endbox").style.display = "block"
-  /*     Congratulations ${playerName}! You answered ${scoringString} Would you like to be added to the Top Scoring Board?`
-        console.log(scoringString)
+    document.querySelector("#endbox").firstElementChild.textContent = `Congratulations ${playerName}! You answered ${scoringString}
+    Would you like to be added to the Top Scoring Board?`
+    document.querySelector("#yes").addEventListener("click", ()=> {
         let wordArray = scoringString.split(' ');
         wordArray.pop();
         wordArray.splice(1,3);
@@ -163,8 +158,12 @@ function handleEnd(scoringString) {
         
         renderTopScore(playerName, newString)
         postTopScore(playerName, newString)
-
-        return true
-    }
-document.querySelector("#question").textContent = "Thanks for playing!" */
+    })
+    document.querySelector("#no").addEventListener("click", ()=> {
+        document.querySelector("#endbox").firstElementChild.textContent = "Thanks for playing! Refresh the page to play again."
+        document.querySelector("#yes").remove();
+        document.querySelector("#no").remove();
+    })
 }
+
+

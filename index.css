@@ -4,6 +4,7 @@
     border: 10px solid green;
     padding: 40px;
     margin: 20px;
+    position: relative;
 }
 
 #top-scorers {
@@ -55,8 +56,15 @@ table, th, td {
 
   #endbox {
     text-align: center;
-    width: 75%;
+    font-size: x-large;
+    width: 80%;
     border: 10px solid green;
+    background-color: gray;
     padding: 40px;
     margin: 20px;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    height: 300px;
+    display: none
   }
