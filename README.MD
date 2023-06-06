@@ -1,6 +1,8 @@
 # Trivia Game in 60 sec
 Trivia game in 60 sec is my first completed single page application project using vanilla Javascript only. Like the name implies, you will answer trivia questions in a 60 second time period. 
 
+![Demo] (https://github.com/jucheng925/Phase-1-project-triviagame/blob/main/demo.gif)
+
 ## Features
 * db.json file where all the questions and answers are stored
 * A form where your name can be submit to have a personal experience
