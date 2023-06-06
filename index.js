@@ -6,6 +6,8 @@
 
 //need to turn on server using "json-server --watch db.json"
 
+//live-server will automatically refresh the page after db.json file get updated
+
 
 let playerName
 document.addEventListener("DOMContentLoaded", ()=> {
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         e.preventDefault();
         playerName = e.target.player_name.value;
         handleName(playerName);
+        document.querySelector("form").reset()
     })
 })
 
@@ -39,7 +42,10 @@ function startClock() {
     const message = document.querySelector("#goodluck")
     message.querySelector("#name").textContent = playerName
     message.style.display = "block"
-    document.querySelectorAll(".choices").forEach(e => e.addEventListener("click", e => handleClick(e.target.id)))
+    document.querySelectorAll(".choices").forEach(letter => letter.addEventListener("click", handleEvent))
+}
+function handleEvent(event) {
+    handleClick(event.target.id)
 }
 
 function countDown() {
@@ -96,7 +102,6 @@ function renderQuestion(dataSelected) {
     answer = dataSelected.correct
 }
 
-//closure - need to bring the correct out of the function block
 function handleClick(selectedChoice) {
     document.querySelector(`#${answer}`).style.borderColor = "red"
     if (selectedChoice === answer) {
@@ -141,7 +146,8 @@ function postTopScore(name, score) {
             correctAnswers: `${score}`,
         }),
     })
-    .then(resp => console.log(resp))
+    .then(resp => resp.json())
+    .then(restart())
 }
 
 function handleEnd(scoringString) {
@@ -158,12 +164,27 @@ function handleEnd(scoringString) {
         
         renderTopScore(playerName, newString)
         postTopScore(playerName, newString)
+        restart
     })
-    document.querySelector("#no").addEventListener("click", ()=> {
-        document.querySelector("#endbox").firstElementChild.textContent = "Thanks for playing! Refresh the page to play again."
-        document.querySelector("#yes").remove();
-        document.querySelector("#no").remove();
-    })
+    document.querySelector("#no").addEventListener("click", restart)
 }
 
+function restart() {
+    document.querySelector("#endbox").firstElementChild.textContent = "Thanks for playing!"
+    document.querySelector("#yes").remove();
+    document.querySelector("#no").remove();
+    setTimeout(returnToDefault, 1000)
+}
 
+function returnToDefault() {
+    document.querySelector("form").style.display = "block"
+    document.querySelector("#endbox").style.display = "none"
+    document.querySelector("#countdown").textContent = 60
+    document.querySelector("#numcorrect").textContent = 0
+    document.querySelector("#totalquestions").textContent = 0
+    document.querySelector("h3").textContent = "Example Question"
+    document.querySelectorAll(".choices").forEach(letter => {
+        letter.removeEventListener("click", handleEvent)
+        letter.textContent = `${letter.id}`
+    })
+}
