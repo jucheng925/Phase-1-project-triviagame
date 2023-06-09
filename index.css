@@ -38,6 +38,7 @@ table, th, td {
     padding: 15px;
     border: 5px solid rgb(71, 190, 102);
     background-color: rgb(71, 190, 102);
+    border-color: white;
   }
 
   #scoring {

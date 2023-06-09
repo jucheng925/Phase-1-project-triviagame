@@ -1,10 +1,5 @@
 
-//add event listener - once user click on an answer - whether its wrong or correct, next question will appear
-    //at the same time, it will be marked as correct or wrong, will indicate in the scoring section
-
-//after 60 secs, will add user name and score on the scoring list on the bottom - using post so it will go back to the server
-
-//need to turn on server using "json-server --watch db.json"
+//need to turn on server using "son-server --watch db.jsonj"
 
 //live-server will automatically refresh the page after db.json file get updated
 
@@ -16,47 +11,49 @@ document.addEventListener("DOMContentLoaded", ()=> {
         e.preventDefault();
         playerName = e.target.player_name.value;
         handleName(playerName);
-        document.querySelector("form").reset()
+        document.querySelector("form").reset();
     })
 })
 
 
 ////Handlers
 function handleName(name) {
-    document.querySelector("#name").textContent = name
-    document.querySelector("#greetings").style.display = "block"
-    document.querySelector("form").style.display = "none"
-    handleStart(document.querySelector("button"))
+    document.querySelector("#name").textContent = name;
+    document.querySelector("#greetings").style.display = "block";
+    document.querySelector("form").style.display = "none";
+    handleStart(document.querySelector("button"));
 }
 
-//come back after building timing, and how to display the first question
 function handleStart(button) {
-    button.addEventListener("click", startClock)
-    button.addEventListener("click", fetchOne)
+    button.addEventListener("click", startClock);
+    button.addEventListener("click", fetchOne);
 }
 
 let intervalId
 function startClock() {
-    intervalId = setInterval(countDown, 1000)
-    document.querySelector("#greetings").style.display = "none"
-    const message = document.querySelector("#goodluck")
-    message.querySelector("#name").textContent = playerName
-    message.style.display = "block"
-    document.querySelectorAll(".choices").forEach(letter => letter.addEventListener("click", handleEvent))
-}
-function handleEvent(event) {
-    handleClick(event.target.id)
+    intervalId = setInterval(countDown, 1000);
+    document.querySelector("#greetings").style.display = "none";
+    const message = document.querySelector("#goodluck");
+    message.querySelector("#name").textContent = playerName;
+    message.style.display = "block";
+    document.querySelectorAll(".choices").forEach(letter => letter.addEventListener("click", handleEvent));
 }
 
+//require a named function in order to remove event listener at the end
+function handleEvent(event) {
+    handleClick(event.target.id);
+}
+
+
 function countDown() {
-    let sec = document.querySelector("#countdown").textContent
+    let sec = document.querySelector("#countdown").textContent;
     if (sec === "0") {
-        clearInterval(intervalId)
-        handleEnd(document.querySelector("#scoring").querySelector("p").textContent)
+        clearInterval(intervalId);
+        handleEnd(document.querySelector("#scoring").querySelector("p").textContent);
     }
     else {
-        sec --
-        document.querySelector("#countdown").textContent = sec
+        sec --;
+        document.querySelector("#countdown").textContent = sec;
     }
 }
 
@@ -83,23 +80,24 @@ function selectAQuestion() {
         return alert("Sorry, we had ran out of questions!")
     }
     else if (usedQuest.includes(i)){
-        return selectAQuestion()
+        return selectAQuestion();
     }
-    else {usedQuest.push(i)
-        return i}
-}
+    else {
+        usedQuest.push(i);
+        return i;
+    }}
 
 
 let answer
 function renderQuestion(dataSelected) {
-    const divQuest = document.querySelector("#question")
-    divQuest.querySelector("h3").textContent = dataSelected.question
-    const aBC = ["a","b","c","d"]
+    const divQuest = document.querySelector("#question");
+    divQuest.querySelector("h3").textContent = dataSelected.question;
+    const aBC = ["a","b","c","d"];
     aBC.forEach(letter => {
-        document.querySelector(`#${letter}`).textContent = `${letter.toUpperCase()}. ${dataSelected[letter]}`
-        document.querySelector(`#${letter}`).style.borderColor = "white"
+        document.querySelector(`#${letter}`).textContent = `${letter.toUpperCase()}. ${dataSelected[letter]}`;
+        document.querySelector(`#${letter}`).style.borderColor = "white";
     })
-    answer = dataSelected.correct
+    answer = dataSelected.correct;
 }
 
 function handleClick(selectedChoice) {
@@ -110,16 +108,16 @@ function handleClick(selectedChoice) {
     else {handleCorrectAnswers(false)}
     setTimeout(fetchOne, 500)
     setTimeout(()=> answer = null, 500) //reset answer
-    
 }
 
 let questionArray = []
 function handleCorrectAnswers(response){
-    response ? questionArray.push("O") : questionArray.push("X")
-    const numCorrect = questionArray.filter(e => e === "O").length
-    document.querySelector("#numcorrect").textContent = numCorrect
-    document.querySelector("#totalquestions").textContent = questionArray.length
+    response ? questionArray.push("O") : questionArray.push("X");
+    const numCorrect = questionArray.filter(e => e === "O").length;
+    document.querySelector("#numcorrect").textContent = numCorrect;
+    document.querySelector("#totalquestions").textContent = questionArray.length;
 }
+//document.querySelector("#scoring").addEventListener()
 
 function fetchScore() {
     fetch("http://localhost:3000/topUsers")
@@ -187,4 +185,5 @@ function returnToDefault() {
         letter.removeEventListener("click", handleEvent)
         letter.textContent = `${letter.id}`
     })
+    questionArray = []
 }
