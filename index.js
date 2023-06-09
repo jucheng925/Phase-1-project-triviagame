@@ -1,8 +1,5 @@
-
-//need to turn on server using "son-server --watch db.jsonj"
-
+//need to turn on server using "json-server --watch db.json"
 //live-server will automatically refresh the page after db.json file get updated
-
 
 let playerName
 document.addEventListener("DOMContentLoaded", ()=> {
@@ -57,16 +54,6 @@ function countDown() {
     }
 }
 
-//This code will allow fetch to occur once for all questions and then using the master data selected the question. Cons - will use a lot of memory space
-//let masterData
-//function fetchQuestions() {
-//    fetch("http://localhost:3000/questions")
-//    .then(resp => resp.json())
-//    .then(data => {
-//        masterData = data
-//       selectAQuestion(masterData)})
-//}
-
 function fetchOne() {
     fetch(`http://localhost:3000/questions/${selectAQuestion()}`)
     .then(resp => resp.json())
@@ -85,7 +72,8 @@ function selectAQuestion() {
     else {
         usedQuest.push(i);
         return i;
-    }}
+    }
+}
 
 
 let answer

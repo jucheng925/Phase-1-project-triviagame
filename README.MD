@@ -27,4 +27,5 @@ If you are able to see the notification that you accessing the server, you are r
 
 
 ## Credits
-Trivia Questions DataBase: <https://travelswithelle.com/other/multiple-choice-trivia-questions/>
+Trivia Questions were taken from <https://travelswithelle.com/other/multiple-choice-trivia-questions/>. The questions were copied and reformated to be stored in the local json server.
+
