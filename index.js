@@ -117,7 +117,6 @@ function handleCorrectAnswers(response){
     document.querySelector("#numcorrect").textContent = numCorrect;
     document.querySelector("#totalquestions").textContent = questionArray.length;
 }
-//document.querySelector("#scoring").addEventListener()
 
 function fetchScore() {
     fetch("http://localhost:3000/topUsers")
