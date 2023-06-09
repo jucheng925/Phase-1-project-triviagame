@@ -122,14 +122,14 @@ function handleCorrectAnswers(response){
 function fetchScore() {
     fetch("http://localhost:3000/topUsers")
     .then(resp => resp.json())
-    .then(data => data.map(user=>renderTopScore(user.fullName, user.correctAnswers)))
+    .then(data => data.forEach(user=>renderTopScore(user.fullName, user.correctAnswers)))
 }
 function renderTopScore(name, score) {
-    const newTr = document.createElement("tr")
+    const newTr = document.createElement("tr");
     newTr.innerHTML = `
             <td>${name}</td>
-            <td>${score}</td>`
-    document.querySelector("table").append(newTr)
+            <td>${score}</td>`;
+    document.querySelector("table").append(newTr);
 } 
 
 function postTopScore(name, score) {
@@ -145,45 +145,49 @@ function postTopScore(name, score) {
         }),
     })
     .then(resp => resp.json())
-    .then(restart())
+    .then(data => console.log(data))
 }
 
 function handleEnd(scoringString) {
-    document.querySelector("#goodluck").style.display = "none"
-    document.querySelector("#endbox").style.display = "block"
+    document.querySelector("#goodluck").style.display = "none";
+    document.querySelector("#endbox").style.display = "block";
     document.querySelector("#endbox").firstElementChild.textContent = `Congratulations ${playerName}! You answered ${scoringString}
-    Would you like to be added to the Top Scoring Board?`
+    Would you like to be added to the Top Scoring Board?`;
     document.querySelector("#yes").addEventListener("click", ()=> {
+        //scoring string example "1 out of 4 questions" - below code will change the string to "1/4"
         let wordArray = scoringString.split(' ');
         wordArray.pop();
         wordArray.splice(1,3);
         let newString = wordArray.toString();
         newString = newString.replace(',',' / ');
-        
-        renderTopScore(playerName, newString)
-        postTopScore(playerName, newString)
-        restart
+
+        renderTopScore(playerName, newString);
+        postTopScore(playerName, newString);
+        restart();
     })
-    document.querySelector("#no").addEventListener("click", restart)
+    document.querySelector("#no").addEventListener("click", restart);
 }
 
+
 function restart() {
-    document.querySelector("#endbox").firstElementChild.textContent = "Thanks for playing!"
-    document.querySelector("#yes").remove();
-    document.querySelector("#no").remove();
-    setTimeout(returnToDefault, 1000)
+    document.querySelector("#endbox").firstElementChild.textContent = "Thanks for playing!";
+    document.querySelector("#yes").style.display = "none";
+    document.querySelector("#no").style.display = "none";
+    setTimeout(returnToDefault, 800);
 }
 
 function returnToDefault() {
-    document.querySelector("form").style.display = "block"
-    document.querySelector("#endbox").style.display = "none"
-    document.querySelector("#countdown").textContent = 60
-    document.querySelector("#numcorrect").textContent = 0
-    document.querySelector("#totalquestions").textContent = 0
-    document.querySelector("h3").textContent = "Example Question"
+    document.querySelector("form").style.display = "block";
+    document.querySelector("#endbox").style.display = "none";
+    document.querySelector("#yes").style.display = "block";
+    document.querySelector("#no").style.display = "block";
+    document.querySelector("#countdown").textContent = 60;
+    document.querySelector("#numcorrect").textContent = 0;
+    document.querySelector("#totalquestions").textContent = 0;
+    document.querySelector("h3").textContent = "Example Question";
     document.querySelectorAll(".choices").forEach(letter => {
         letter.removeEventListener("click", handleEvent)
         letter.textContent = `${letter.id}`
-    })
-    questionArray = []
+    });
+    questionArray = [];
 }
