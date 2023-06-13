@@ -178,6 +178,7 @@ function returnToDefault() {
     document.querySelector("#numcorrect").textContent = 0;
     document.querySelector("#totalquestions").textContent = 0;
     document.querySelector("h3").textContent = "Example Question";
+    document.querySelector("#display").textContent = ""
     document.querySelectorAll(".choices").forEach(letter => {
         letter.removeEventListener("click", handleEvent)
         letter.textContent = `${letter.id}`
