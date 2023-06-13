@@ -10,10 +10,13 @@ document.addEventListener("DOMContentLoaded", ()=> {
         handleName(playerName);
         document.querySelector("form").reset();
     })
+    document.querySelector("#scoring").addEventListener("mouseover", () => {
+        document.querySelector("#display").style.display = "block";
+        setTimeout(()=> document.querySelector("#display").style.display = "none", 600)
+    })
 })
 
 
-////Handlers
 function handleName(name) {
     document.querySelector("#name").textContent = name;
     document.querySelector("#greetings").style.display = "block";
@@ -21,10 +24,12 @@ function handleName(name) {
     handleStart(document.querySelector("button"));
 }
 
+
 function handleStart(button) {
     button.addEventListener("click", startClock);
     button.addEventListener("click", fetchOne);
 }
+
 
 let intervalId
 function startClock() {
@@ -46,7 +51,7 @@ function countDown() {
     let sec = document.querySelector("#countdown").textContent;
     if (sec === "0") {
         clearInterval(intervalId);
-        handleEnd(document.querySelector("#scoring").querySelector("p").textContent);
+        handleEnd(document.querySelector("#scoring").firstElementChild.textContent);
     }
     else {
         sec --;
@@ -78,8 +83,7 @@ function selectAQuestion() {
 
 let answer
 function renderQuestion(dataSelected) {
-    const divQuest = document.querySelector("#question");
-    divQuest.querySelector("h3").textContent = dataSelected.question;
+    document.querySelector("h3").textContent = dataSelected.question;
     const aBC = ["a","b","c","d"];
     aBC.forEach(letter => {
         document.querySelector(`#${letter}`).textContent = `${letter.toUpperCase()}. ${dataSelected[letter]}`;
@@ -102,6 +106,7 @@ let questionArray = []
 function handleCorrectAnswers(response){
     response ? questionArray.push("O") : questionArray.push("X");
     const numCorrect = questionArray.filter(e => e === "O").length;
+    document.querySelector("#display").textContent = questionArray;
     document.querySelector("#numcorrect").textContent = numCorrect;
     document.querySelector("#totalquestions").textContent = questionArray.length;
 }
@@ -111,6 +116,7 @@ function fetchScore() {
     .then(resp => resp.json())
     .then(data => data.forEach(user=>renderTopScore(user.fullName, user.correctAnswers)))
 }
+
 function renderTopScore(name, score) {
     const newTr = document.createElement("tr");
     newTr.innerHTML = `
