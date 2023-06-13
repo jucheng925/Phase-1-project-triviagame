@@ -9,6 +9,7 @@ Trivia game in 60 sec is my first completed single page application project usin
 * A start button to activate the timer so you won't be caught by surprise.
 * Real-time response in which the correct answer will be highlighted in red after you have select your choice.
 * Number of correct reponses will be tallying as you go along.
+* A mouseover feature where you can hover to see a snapshot view of which questions you got incorrect.
 * In the end, you will have the option to be include on our "Top Scorers of All Time" scoring board. 
 
 ## Getting Started
