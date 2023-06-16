@@ -27,7 +27,7 @@ function handleName(name) {
 
 function handleStart(button) {
     button.addEventListener("click", startClock);
-    button.addEventListener("click", fetchOne);
+    button.addEventListener("click", fetchAll);
 }
 
 
@@ -59,13 +59,21 @@ function countDown() {
     }
 }
 
-function fetchOne() {
-    fetch(`http://localhost:3000/questions/${selectAQuestion()}`)
+function fetchAll() {
+    fetch("http://localhost:3000/questions")
     .then(resp => resp.json())
-    .then(data => renderQuestion(data))
+    .then(data => data.forEach(question=> renderQuestion(question)))
 }
 
-const usedQuest = []
+
+
+//function fetchOne() {
+//    fetch(`http://localhost:3000/questions/${selectAQuestion()}`)
+//    .then(resp => resp.json())
+//    .then(data => renderQuestion(data))
+//}
+
+/*const usedQuest = []
 function selectAQuestion() {
     let i = Math.floor(Math.random() * 100) + 1;//return random number from 1-100//
     if (usedQuest.length === 100) {
@@ -78,7 +86,7 @@ function selectAQuestion() {
         usedQuest.push(i);
         return i;
     }
-}
+}*/
 
 
 let answer
